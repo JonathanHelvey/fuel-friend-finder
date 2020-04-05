@@ -1,5 +1,5 @@
-
 import React from 'react';
+
 
 const GasChecker = () => {
 
@@ -8,6 +8,6 @@ const GasChecker = () => {
       FOOOTER
     </div>
   );
-}
+};
 
 export default GasChecker;
