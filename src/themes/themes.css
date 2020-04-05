@@ -1,0 +1,18 @@
+
+.section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 8vw;
+  height: 90vh;
+  width: auto;
+  background-color: grey;
+} 
+
+@media (min-width: 30em) {
+  .section {
+    padding-left: 14vw;
+    padding-right: 14vw;
+  }
+}
