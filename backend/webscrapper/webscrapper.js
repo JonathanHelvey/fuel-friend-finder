@@ -25,7 +25,7 @@ const gasPriceScrapper = async (city, state) => {
         //     gasJson.price = gasElement.querySelector('strong.price').innerText;
         // }
       } catch (exception) {
-
+        console.log('Error Grabing Data');
       }
       gasStations.push(gasJson);
     });
