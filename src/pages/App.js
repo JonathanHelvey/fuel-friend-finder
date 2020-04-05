@@ -1,15 +1,16 @@
 import React from 'react';
 import '../themes/themes.css';
 
-import Header from '../components/Header/header';
+import Header from '../components/Header/Header';
+import GasChecker from '../components/GasChecker.js';
+import Footer from '../components/Footer';
 
 function App() {
   return (
     <div>
       <Header />
-      <body>
-        <p>Find Gas!</p>
-      </body>
+      <GasChecker />
+      <Footer />
     </div>
   );
 }

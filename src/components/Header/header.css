@@ -27,6 +27,7 @@
   transform: translateY(10);
   transition: transform 6s ease;
   animation: myanimation 3s;
+  animation-fill-mode: forwards;
   z-index: 2;
 }
 @keyframes myanimation {
@@ -35,11 +36,11 @@
     color: transparent;
   }
   35% {
-    background-color: gray;
+    background-color: rgb(53, 52, 52);
     color: rosybrown;
   }
   100% {
-    background-color: gray;
+    background-color: black;
     color: rosybrown;
   }
 }
