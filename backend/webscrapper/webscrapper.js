@@ -20,7 +20,7 @@ const gasPriceScrapper = async (city, state) => {
       try {
         gasJson.name = gasElement.querySelector('strong').innerText;
         gasJson.price = gasElement.querySelector('div.gb-price').innerText;
-        gasJson.location = gasElement.innerText; // parse string.
+        // gasJson.location = gasElement.innerText; // parse string.
         // if(gasElement.querySelector('strong.price')){
         //     gasJson.price = gasElement.querySelector('strong.price').innerText;
         // }
