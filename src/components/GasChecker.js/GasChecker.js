@@ -54,7 +54,7 @@ const GasChecker = () => {
               value={city}
             />
             <button type="button" onClick={() => handleSubmit()}>Submit</button>
-            <h1 style={{color: 'white', fontSize: "45"}}>{message}</h1>
+            <h1 style={{ color: 'white', fontSize: '45' }}>{message}</h1>
           </form>
         </div>
       </div>
