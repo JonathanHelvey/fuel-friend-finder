@@ -10,17 +10,7 @@ const GasChecker = () => {
   const [gasData, setGasData] = useState();
   const [state, setState] = useState('');
   const [city, setCity] = useState('');
-  const [loading, setLoading] = useState(false);
-  // const [header, ]
-
-
-  // const listenEvent = () => {
-  //   if (loading) {
-  //     return setHeader('header');
-  //   } if (window.scrollY > 70) {
-  //     return setHeader('header2');
-  //   }
-  // };
+ const [loading, setLoading] = useState(false);
 
   const handleSubmit = async () => {
     // setMessage('');
