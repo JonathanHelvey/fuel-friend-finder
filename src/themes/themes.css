@@ -1,13 +1,10 @@
 
 .section {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  padding: 8vw;
-  height: 90vh;
-  width: auto;
-  background-color: grey;
+    padding: 8vw;
+    background-color: grey;
+    overflow-y: scroll;
+    height: 80vh;
+    width: auto;
 } 
 
 .section2 {
@@ -15,8 +12,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 8vw;
-  height: 45vh;
+  height: 50vh;
   width: auto;
   color: white;
   background-color:black;

@@ -5,7 +5,7 @@ import axios from 'axios';
 import './GasChecker.css';
 
 const GasChecker = () => {
-  // const [gasData, setGasData] = useState();
+  const [gasData, setGasData] = useState();
   const [state, setState] = useState('');
   const [city, setCity] = useState('');
 
@@ -17,6 +17,7 @@ const GasChecker = () => {
       const result = await axios(`https://g5cqkuic3b.execute-api.us-east-1.amazonaws.com/dev/gasData?state=${state}&city=${city}`);
       // setMessage('Tier has been updated!');
       console.log('RESULT', result);
+      setGasData(result.data);
     } catch (err) {
       console.error('An error occurred updating tier', err);
       // setMessage('An error occurred updating tier');
@@ -24,12 +25,14 @@ const GasChecker = () => {
     // setSaving(false);
   };
 
+  console.log('THIS DATA', gasData);
 
   return (
-    <div className="section">
-      <div>
+    <>
+      <div className="section2">
         <h2>Find The Cheapest Gas Prices Near You!</h2>
         <h3>Type in State and City to begin Search</h3>
+
         <div>
           <form>
             <input
@@ -52,7 +55,28 @@ const GasChecker = () => {
           </form>
         </div>
       </div>
-    </div>
+      <div className="section">
+        <div>
+          {!gasData ? null : (
+            <div>
+              {gasData.data.map((store, index) => {
+                console.log(store.name);
+                return (
+                  <div className="card-container">
+                    <div key={`store-${index}`} className="card">
+                      <h2>{store.name}</h2>
+                      <h2>{`$${store.price}`}</h2>
+                      <h3>{store.address}</h3>
+                      <h3>{store.city}</h3>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </div>
+      </div>
+    </>
   );
 };
 
