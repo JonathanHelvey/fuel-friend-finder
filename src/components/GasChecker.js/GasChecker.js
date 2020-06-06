@@ -4,7 +4,7 @@ import axios from 'axios';
 
 import './GasChecker.css';
 
-// TODO: Clean up! Add more! Phone fix. Fix Styles.
+// TODO: Clean up! Add more! Phone fix. Fix Styles. Add Loader.
 const GasChecker = () => {
   const [gasData, setGasData] = useState();
   const [state, setState] = useState('');
