@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import './GasChecker.css';
 
+// TODO: Clean up! Add more! Phone fix. Fix Styles.
 const GasChecker = () => {
   const [gasData, setGasData] = useState();
   const [state, setState] = useState('');
@@ -58,11 +59,11 @@ const GasChecker = () => {
       <div className="section">
         <div>
           {!gasData ? null : (
-            <div>
+            <div className="card-container">
               {gasData.data.map((store, index) => {
                 console.log(store.name);
                 return (
-                  <div className="card-container">
+                  <div >
                     <div key={`store-${index}`} className="card">
                       <h2>{store.name}</h2>
                       <h2>{`$${store.price}`}</h2>

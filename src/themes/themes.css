@@ -1,4 +1,9 @@
 
+.wrapper {
+
+  height: 100%;
+}
+
 .section {
     padding: 8vw;
     background-color: grey;
