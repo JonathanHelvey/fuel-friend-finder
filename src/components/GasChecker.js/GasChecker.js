@@ -2,18 +2,29 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+import LoadingSpinner from '../../atoms/index';
 import './GasChecker.css';
 
-// TODO: Clean up! Add more! Phone fix. Fix Styles. Add Loader.
+// TODO: Clean up! Add more! Phone fix. Fix Styles. Fix Loader.
 const GasChecker = () => {
   const [gasData, setGasData] = useState();
   const [state, setState] = useState('');
   const [city, setCity] = useState('');
+  const [loading, setLoading] = useState(false);
+  // const [header, ]
 
+
+  // const listenEvent = () => {
+  //   if (loading) {
+  //     return setHeader('header');
+  //   } if (window.scrollY > 70) {
+  //     return setHeader('header2');
+  //   }
+  // };
 
   const handleSubmit = async () => {
     // setMessage('');
-    // setSaving(true);
+    setLoading(true);
     try {
       const result = await axios(`https://g5cqkuic3b.execute-api.us-east-1.amazonaws.com/dev/gasData?state=${state}&city=${city}`);
       // setMessage('Tier has been updated!');
@@ -23,7 +34,7 @@ const GasChecker = () => {
       console.error('An error occurred updating tier', err);
       // setMessage('An error occurred updating tier');
     }
-    // setSaving(false);
+    setLoading(false);
   };
 
   console.log('THIS DATA', gasData);
@@ -33,7 +44,6 @@ const GasChecker = () => {
       <div className="section2">
         <h2>Find The Cheapest Gas Prices Near You!</h2>
         <h3>Type in State and City to begin Search</h3>
-
         <div>
           <form>
             <input
@@ -58,7 +68,7 @@ const GasChecker = () => {
       </div>
       <div className="section">
         <div>
-          {!gasData ? null : (
+          {!gasData ? (<LoadingSpinner />) : (
             <div className="card-container">
               {gasData.data.map((store, index) => {
                 console.log(store.name);
