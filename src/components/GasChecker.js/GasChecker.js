@@ -10,19 +10,20 @@ const GasChecker = () => {
   const [gasData, setGasData] = useState();
   const [state, setState] = useState('');
   const [city, setCity] = useState('');
- const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState('');
 
   const handleSubmit = async () => {
-    // setMessage('');
+    setMessage('');
     setLoading(true);
     try {
       const result = await axios(`https://g5cqkuic3b.execute-api.us-east-1.amazonaws.com/dev/gasData?state=${state}&city=${city}`);
-      // setMessage('Tier has been updated!');
+      setMessage('Gas Prices have been updated!');
       console.log('RESULT', result);
       setGasData(result.data);
     } catch (err) {
-      console.error('An error occurred updating tier', err);
-      // setMessage('An error occurred updating tier');
+      console.error('An error occurred updating Gas Prices', err);
+      setMessage('An error occurred updating Gas Prices');
     }
     setLoading(false);
   };
@@ -53,6 +54,7 @@ const GasChecker = () => {
               value={city}
             />
             <button type="button" onClick={() => handleSubmit()}>Submit</button>
+            <h1 style={{color: 'white', fontSize: "45"}}>{message}</h1>
           </form>
         </div>
       </div>
@@ -63,7 +65,7 @@ const GasChecker = () => {
               {gasData.data.map((store, index) => {
                 console.log(store.name);
                 return (
-                  <div >
+                  <div>
                     <div key={`store-${index}`} className="card">
                       <h2>{store.name}</h2>
                       <h2>{`$${store.price}`}</h2>
