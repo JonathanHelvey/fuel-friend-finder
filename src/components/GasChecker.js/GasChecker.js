@@ -18,19 +18,15 @@ const GasChecker = () => {
     setMessage('');
     try {
       const result = await axios(`https://g5cqkuic3b.execute-api.us-east-1.amazonaws.com/dev/gasData?state=${state}&city=${city}`);
-      console.log('RESULT', result.data.length);
+      console.log('RESULT', result.data);
       setLoading(false);
       setGasData(result.data);
-      setMessage('Gas Prices Retrived');
+      setMessage('Gas Prices Retrived!');
     } catch (err) {
       console.error('An error occurred updating Gas Prices', err);
       setMessage('An error occurred updating Gas Prices');
     }
-    // setLoading(false);
   };
-
-  console.log("MESSAGE", message);
-  console.log('THIS DATA', gasData);
 
   return (
     <>
