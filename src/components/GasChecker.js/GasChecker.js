@@ -5,7 +5,9 @@ import axios from 'axios';
 import LoadingSpinner from '../../atoms/index';
 import './GasChecker.css';
 
-// TODO: Clean up! Phone fix. Fix Styles. Fix Gass Error Message. Fix Input Boxes.
+import { titleCaseReg } from '../../helpers';
+
+// TODO: Clean up! Phone fix. Fix Styles. Fix Gass Error Message. Stlye Input Boxes and buttons.
 const GasChecker = () => {
   const [gasData, setGasData] = useState();
   const [state, setState] = useState('');
@@ -43,7 +45,7 @@ const GasChecker = () => {
               name="state"
               placeholder="State"
               onChange={(e) => setState(e.target.value)}
-              value={state}
+              value={titleCaseReg(state)}
             />
             <input
               className="search-bar"
@@ -51,7 +53,7 @@ const GasChecker = () => {
               name="city"
               placeholder="City"
               onChange={(e) => setCity(e.target.value)}
-              value={city}
+              value={titleCaseReg(city)}
             />
             <button type="button" onClick={() => handleSubmit()}>Submit</button>
             <h3>{message}</h3>
