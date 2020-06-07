@@ -5,7 +5,7 @@ import axios from 'axios';
 import LoadingSpinner from '../../atoms/index';
 import './GasChecker.css';
 
-// TODO: Clean up! Phone fix. Fix Styles. Fix Gass Error Message.
+// TODO: Clean up! Phone fix. Fix Styles. Fix Gass Error Message. Fix Input Boxes.
 const GasChecker = () => {
   const [gasData, setGasData] = useState();
   const [state, setState] = useState('');
@@ -16,6 +16,7 @@ const GasChecker = () => {
   const handleSubmit = async () => {
     setLoading(true);
     setMessage('');
+    setGasData(null);
     try {
       const result = await axios(`https://g5cqkuic3b.execute-api.us-east-1.amazonaws.com/dev/gasData?state=${state}&city=${city}`);
       console.log('RESULT', result.data);
