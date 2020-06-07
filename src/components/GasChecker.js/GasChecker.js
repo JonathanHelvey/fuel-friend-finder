@@ -5,7 +5,7 @@ import axios from 'axios';
 import LoadingSpinner from '../../atoms/index';
 import './GasChecker.css';
 
-// TODO: Clean up! Add more! Phone fix. Fix Styles. Fix Loader.
+// TODO: Clean up! Phone fix. Fix Styles. Fix Gass Error Message.
 const GasChecker = () => {
   const [gasData, setGasData] = useState();
   const [state, setState] = useState('');
@@ -21,6 +21,7 @@ const GasChecker = () => {
       console.log('RESULT', result.data);
       setLoading(false);
       setGasData(result.data);
+      // set Message. if statement?
       setMessage('Gas Prices Retrived!');
     } catch (err) {
       console.error('An error occurred updating Gas Prices', err);
