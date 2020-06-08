@@ -51,6 +51,19 @@
   color: #f59596;
 }
 
+@media (max-width: 766px) {
+  .header {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 766px) {
+  .header2 {
+    justify-content: center;
+  }
+}
+
+
 /* .links {
   padding: 0;
   margin: 0 24px;
