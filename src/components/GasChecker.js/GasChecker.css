@@ -23,10 +23,37 @@
   height: auto;
 }
 
+@media (min-width: 300px) {
+  .card {
+    width: 400px;
+    font-size: 12px;
+  }
+}
+
 h3 {
   display: flex;
   justify-content: center;
   color: 'white';
   font-size: '45';
   align-items: 'center'; 
+}
+
+@media (min-width: 300px) {
+  h3 {
+    font-size: 10px;
+  }
+}
+
+form {
+  padding: 30px;
+}
+
+.title {
+  padding: 20px;
+}
+
+@media (min-width: 300px) {
+  .title {
+    font-size: 14px;
+  }
 }

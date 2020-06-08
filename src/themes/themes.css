@@ -1,6 +1,5 @@
 
 .wrapper {
-
   height: 100%;
 }
 
@@ -18,6 +17,7 @@
   flex-direction: column;
   align-items: center;
   height: 50vh;
+  padding-top: 80px;
   width: auto;
   color: white;
   background-color:black;

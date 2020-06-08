@@ -22,11 +22,11 @@ function Header2() {
   return (
     <header className={header}>
       <div className="logo">Fuel Friend Finder</div>
-      <ul className="links">
+      {/* <ul className="links">
         <li className="link-item">home</li>
         <li className="link-item">about</li>
         <li className="link-item">join</li>
-      </ul>
+      </ul> */}
     </header>
   );
 }
