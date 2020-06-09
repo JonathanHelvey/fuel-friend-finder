@@ -8,7 +8,7 @@ https://github.com/JonathanHelvey/fuel-friend-finder-backend
 
 ## Built With
 
-Gatsby.js, Material-UI, Styled-Components, React-Hooks.
+HTML5, CSS3, JavaScript, Puppeteer, AWS Lambda, React-Hooks.
 
 ## 💫 Deployed With Neflify
 
