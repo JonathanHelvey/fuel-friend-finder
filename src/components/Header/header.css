@@ -26,17 +26,7 @@
   animation-fill-mode: forwards;
   z-index: 2;
 }
-@keyframes myanimation {
-  0% {
-    background-color: transparent;
-  }
-  35% {
-    background-color: transparent;
-  }
-  100% {
-    background-color: transparent;
-  }
-}
+
 
 .logo {
   margin: 0 80px;
@@ -53,6 +43,17 @@
 @media (max-width: 766px) {
   .header2 {
     justify-content: center;
+  }
+  @keyframes myanimation {
+    0% {
+      background-color: transparent;
+    }
+    35% {
+      background-color: #313131;
+    }
+    100% {
+      background-color: black;
+    }
   }
 }
 
