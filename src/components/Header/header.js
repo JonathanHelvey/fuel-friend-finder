@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import './header.css';
 
-function Header2() {
+function Header() {
   const [header, setHeader] = useState('header');
 
   const listenScrollEvent = () => {
@@ -31,4 +31,4 @@ function Header2() {
   );
 }
 
-export default Header2;
+export default Header;
