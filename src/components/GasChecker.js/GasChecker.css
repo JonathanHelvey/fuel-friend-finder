@@ -46,8 +46,9 @@ input {
   background-color: white;
   width: 150px;
   border-radius: 2em;
-  height: auto;
+  height: 40px;
   margin: 5px;
+  padding: 10px;
 }
 
 .title {
