@@ -65,15 +65,15 @@ const GasChecker = () => {
             />
             <Button variant="contained" color="secondary" type="button" onClick={() => handleSubmit()}>Submit</Button>
             <div className="message">
-              <h5 style={{ display: 'flex', justifyContent: 'center' }}>{message}</h5>
-              {loading ? <h5 style={{ display: 'flex', justifyContent: 'center' }}>Loading...</h5> : null}
+              {loading ? <h5 className="loading">Loading...</h5> : null}
+              <h5 className="loading">{message}</h5>
             </div>
           </form>
         </div>
       </div>
       <div className="section">
         <div>
-          {loading ? <LoadingSpinner /> : null}
+          {loading ? <LoadingSpinner /> : <h1 className="loading">Find Your Gas Prices Here!</h1>}
           {(!gasData) ? null : (
             <div className="card-container">
               {gasData.data.map((store, index) => {

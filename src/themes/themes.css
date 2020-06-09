@@ -28,3 +28,11 @@
     padding-right: 14vw;
   }
 }
+
+@media (max-width: 766px) {
+  .section2 {
+    padding-left: 14vw;
+    padding-right: 14vw;
+    height: 75vh;
+  }
+}

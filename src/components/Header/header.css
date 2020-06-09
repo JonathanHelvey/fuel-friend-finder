@@ -35,6 +35,12 @@
 }
 
 @media (max-width: 766px) {
+  .logo {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 766px) {
   .header {
     justify-content: center;
   }
