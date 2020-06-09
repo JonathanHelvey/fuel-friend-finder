@@ -29,22 +29,29 @@
   }
 }
 
-h3 {
+.sub-titles {
   display: flex;
   justify-content: center;
-  color: 'white';
-  font-size: '45';
-  align-items: 'center'; 
+  color: white;
+  align-items: center; 
 }
 
 @media (max-width: 766px) {
-  h3 {
+  sub-titles {
     font-size: 14px;
   }
 }
 
 form {
-  padding: 30px;
+  padding: 20px;
+}
+
+input {
+  background-color: white;
+  width: 150px;
+  border-radius: 2em;
+  height: auto;
+  margin: 5px;
 }
 
 .title {
@@ -53,6 +60,25 @@ form {
 
 @media (max-width: 766px) {
   .title {
-    font-size: 18px;
+    font-size: 20px;
   }
+}
+
+@media (max-width: 766px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+  }
+}
+
+.padding {
+  height: 80px;
+  background-color: white;
+}
+
+.message {
+  height: 20px;
+  width: auto;
 }
