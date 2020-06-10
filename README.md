@@ -6,9 +6,13 @@ https://fuel-friend-finder.netlify.app/
 
 https://github.com/JonathanHelvey/fuel-friend-finder-backend
 
-## Built With
+## Tech Stack
 
 HTML5, CSS3, JavaScript, Puppeteer, AWS Lambda, React-Hooks.
+
+## Details
+
+Check out this fun project I created.  Find cheap gas prices near you! Built using Puppeteer to web-scrap the gas data.  React on the front end and on the backend I created a Serverless AWS lambda function to make the API call.
 
 ## 💫 Deployed With Neflify
 
