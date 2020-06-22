@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button';
 import LoadingSpinner from '../../atoms/index';
 import './GasChecker.css';
 
-import { titleCaseReg } from '../../helpers';
+import { titleCaseReg, acronymToFullName } from '../../helpers';
 
 // TODO: Clean up!
 const GasChecker = () => {
@@ -53,7 +53,7 @@ const GasChecker = () => {
               name="state"
               placeholder="State"
               onChange={(e) => setState(e.target.value)}
-              value={titleCaseReg(state)}
+              value={acronymToFullName(titleCaseReg(state))}
             />
             <input
               className="search-bar"
@@ -61,7 +61,7 @@ const GasChecker = () => {
               name="city"
               placeholder="City"
               onChange={(e) => setCity(e.target.value)}
-              value={titleCaseReg(city)}
+              value={acronymToFullName(titleCaseReg(city))}
             />
             <Button variant="contained" color="secondary" type="button" onClick={() => handleSubmit()}>Submit</Button>
             <div className="message">
