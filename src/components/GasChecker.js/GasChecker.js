@@ -61,7 +61,7 @@ const GasChecker = () => {
               name="city"
               placeholder="City"
               onChange={(e) => setCity(e.target.value)}
-              value={acronymToFullName(titleCaseReg(city))}
+              value={titleCaseReg(city)}
             />
             <Button variant="contained" color="secondary" type="button" onClick={() => handleSubmit()}>Submit</Button>
             <div className="message">
