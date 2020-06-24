@@ -52,8 +52,8 @@ const GasChecker = () => {
               type="text"
               name="state"
               placeholder="State"
-              onChange={(e) => setState(e.target.value)}
-              value={acronymToFullName(titleCaseReg(state))}
+              onChange={(e) => setState(acronymToFullName(e.target.value))}
+              value={titleCaseReg(state)}
             />
             <input
               className="search-bar"
