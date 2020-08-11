@@ -27,7 +27,7 @@ const GasChecker = () => {
       if (result.data && result.data.data.length === 0) {
         setMessage('An error occured updating gas prices. Please Check Spelling!');
       } else {
-        setMessage('Gas Prices Retrived!');
+        setMessage('Gas Prices Retrieved!');
       }
     } catch (err) {
       console.error('An error occurred updating Gas Prices', err);
