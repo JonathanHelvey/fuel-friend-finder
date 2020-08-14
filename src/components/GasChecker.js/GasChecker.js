@@ -43,7 +43,7 @@ const GasChecker = () => {
         <h4 className="sub-titles">Type in a STATE to find the cheapest gas prices in state.</h4>
         <br />
         <h4 className="sub-titles">Or Type in both STATE and CITY</h4>
-        <h4 className="sub-titles">to find cheapest gas prices in your city!</h4>
+        <h4 className="sub-titles">to find cheapest gas prices in your city.</h4>
         <div>
           <form>
             <input
